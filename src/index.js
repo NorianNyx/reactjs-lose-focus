@@ -13,18 +13,18 @@
  * Documentation on react-router-redux can be found here:
  * https://github.com/reactjs/react-router-redux
  */
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 
-import './index.css'
+import './index.css';
 
-import App from './components/App'
-import configureStore from './configureStore'
+import App from './components/App';
+import configureStore from './configureStore';
 
 // This is where our store is created, it is then
 // passed to our Provider.
-const store = configureStore()
+const store = configureStore();
 
 //----Render----//
 ReactDOM.render(
@@ -34,4 +34,4 @@ ReactDOM.render(
 		<App />
 	</Provider>,
 	document.getElementById('root')
-)
+);

@@ -11,5 +11,5 @@
  * Look into reselect library if you want more selector functionality. It can be found
  * here: https://github.com/reduxjs/reselect
  */
- export const selectedLocationSelector = (state) => state.locationSelector.currentSelection
+ export const selectedLocationSelector = (state) => state.locationSelector.currentSelection;
  

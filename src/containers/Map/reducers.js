@@ -3,7 +3,7 @@
  */
 import {
     FETCH_LOCATIONS_SUCCESS
-} from './constants'
+} from './constants';
 
 /**
  * Action Handlers
@@ -15,9 +15,9 @@ const ACTION_HANDLERS = {
     [FETCH_LOCATIONS_SUCCESS]: (state, action) => {
         return { ...state,
             markers: action.payload
-        }
+        };
     }
-}
+};
 
 
 /**
@@ -33,12 +33,12 @@ const initialState = {
     markers: [
         { lat: 33.488069, lng: -112.072972 }
     ]
-}
+};
 
 export default (state = initialState, action) => {
-    const handler = ACTION_HANDLERS[action.type]
+    const handler = ACTION_HANDLERS[action.type];
 
     return handler ?
         handler(state, action) :
-        state
-}
+        state;
+};

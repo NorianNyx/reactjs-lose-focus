@@ -1,20 +1,20 @@
-import { call, put, takeLatest } from 'redux-saga/effects'
+import { call, put, takeLatest } from 'redux-saga/effects';
 
-import MapApi from '../../api/map'
+import MapApi from '../../api/map';
 
 /**
  * Import Actions
  */
 import {
     fetchLocationsSuccess
-} from './actions'
+} from './actions';
 
 /**
  * Import Constants
  */
 import { 
     FETCH_LOCATIONS_REQUEST
-} from './constants'
+} from './constants';
 
 /**
  * Map Sagas
@@ -28,9 +28,9 @@ import {
  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*
  */
 export function* fetchLocations(action) {
-    const locations = yield call(MapApi.getLocations, action.payload)
+    const locations = yield call(MapApi.getLocations, action.payload);
 
-    yield put(fetchLocationsSuccess(locations))
+    yield put(fetchLocationsSuccess(locations));
 }
 
 /**
@@ -44,5 +44,5 @@ export function* fetchLocations(action) {
  * https://redux-saga.js.org/docs/introduction/
  */
 export default function* MapSagas() {
-    yield takeLatest(FETCH_LOCATIONS_REQUEST, fetchLocations)
+    yield takeLatest(FETCH_LOCATIONS_REQUEST, fetchLocations);
 }

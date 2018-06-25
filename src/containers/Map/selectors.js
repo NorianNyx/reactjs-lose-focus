@@ -11,4 +11,4 @@
  * Look into reselect library if you want more selector functionality. It can be found
  * here: https://github.com/reduxjs/reselect
  */
-export const markersSelector = (state) => state.map.markers
+export const markersSelector = (state) => state.map.markers;

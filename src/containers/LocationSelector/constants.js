@@ -11,4 +11,4 @@
  * 
  * Example: export const MY_TYPE = 'myproject/MyContainer/MY_TYPE
  */
-export const SELECTION_CHANGE = 'google-maps-react-demo/LocationSelector/SELECTION_CHANGE'
+export const SELECTION_CHANGE = 'google-maps-react-demo/LocationSelector/SELECTION_CHANGE';

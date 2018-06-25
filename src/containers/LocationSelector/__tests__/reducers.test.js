@@ -1,12 +1,12 @@
-import reducer from '../reducers'
-import * as constants from '../constants'
+import reducer from '../reducers';
+import * as constants from '../constants';
 
 describe('LocationSelector Reducer', () => {
     it('should return initial state', () => {
         expect(reducer(undefined, { type: '' })).toEqual({
             currentSelection: 'Phoenix'
-        })
-    })
+        });
+    });
 
     it('should handle SELECTION_CHANGE', () => {
         expect(reducer(undefined, { 
@@ -14,6 +14,6 @@ describe('LocationSelector Reducer', () => {
             payload: 'test'
         })).toEqual({
             currentSelection: 'test'
-        })
-    })
-})
+        });
+    });
+});

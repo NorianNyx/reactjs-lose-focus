@@ -35,7 +35,7 @@ class MapApi {
             }) */
 
         return new Promise((resolve) => {
-            let locations = []
+            let locations = [];
 
             switch (city) {
                 case 'Phoenix':
@@ -43,21 +43,21 @@ class MapApi {
                         { lat: 33.488069, lng: -112.072972 },
                         { lat: 33.4926138, lng: -112.07525759999999 },
                         { lat: 33.4465079, lng: -112.0974721 }
-                    ]
-                    break
+                    ];
+                    break;
                 case 'Tucson':
                     locations = [
                         { lat: 32.178732, lng: -110.93040589999998 },
                         { lat: 32.1632503, lng: -110.97104150000001 }
-                    ]
-                    break
+                    ];
+                    break;
                 default:
-                    break
+                    break;
             }
 
-            resolve(locations)
-        })
+            resolve(locations);
+        });
     }
 }
 
-export default MapApi
+export default MapApi;

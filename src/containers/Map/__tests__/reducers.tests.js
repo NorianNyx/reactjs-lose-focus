@@ -1,5 +1,5 @@
-import reducer from '../reducers'
-import * as constants from '../constants'
+import reducer from '../reducers';
+import * as constants from '../constants';
 
 describe('Map Reducer', () => {
     it('should return initial state', () => {
@@ -7,8 +7,8 @@ describe('Map Reducer', () => {
             markers: [
                 { lat: 33.488069, lng: -112.072972 }
             ]
-        })
-    })
+        });
+    });
 
     it('should handle FETCH_LOCATIONS_SUCCESS', () => {
         expect(reducer(undefined, { 
@@ -16,6 +16,6 @@ describe('Map Reducer', () => {
             payload: 'test'
         })).toEqual({
             markers: 'test'
-        })
-    })
-})
+        });
+    });
+});

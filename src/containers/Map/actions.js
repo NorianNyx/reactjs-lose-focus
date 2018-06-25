@@ -15,7 +15,7 @@
 import {
     FETCH_LOCATIONS_REQUEST,
     FETCH_LOCATIONS_SUCCESS
-} from './constants'
+} from './constants';
 
 /**
  * Dispatch to fetch new locations.
@@ -25,8 +25,8 @@ import {
  * the selected location.
  */
 export const fetchLocationsRequest = (value) => {
-    return { type: FETCH_LOCATIONS_REQUEST, payload: value }
-}
+    return { type: FETCH_LOCATIONS_REQUEST, payload: value };
+};
 
 /**
  * Dispatch that new locations have been fetched.
@@ -36,5 +36,5 @@ export const fetchLocationsRequest = (value) => {
  * the new locations.
  */
 export const fetchLocationsSuccess = (value) => {
-    return { type: FETCH_LOCATIONS_SUCCESS, payload: value }
-}
+    return { type: FETCH_LOCATIONS_SUCCESS, payload: value };
+};

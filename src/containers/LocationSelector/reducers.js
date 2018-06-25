@@ -3,7 +3,7 @@
  */
 import {
     SELECTION_CHANGE
-} from './constants'
+} from './constants';
 
 /**
  * Action Handlers
@@ -15,9 +15,9 @@ const ACTION_HANDLERS = {
     [SELECTION_CHANGE]: (state, action) => {
         return { ...state,
             currentSelection: action.payload
-        }
+        };
     }
-}
+};
 
 /**
  * LocationSelector Reducer
@@ -30,12 +30,12 @@ const ACTION_HANDLERS = {
  */
 const initialState = {
     currentSelection: 'Phoenix'
-}
+};
 
 export default (state = initialState, action) => {
-    const handler = ACTION_HANDLERS[action.type]
+    const handler = ACTION_HANDLERS[action.type];
 
     return handler ?
         handler(state, action) :
-        state
-}
+        state;
+};

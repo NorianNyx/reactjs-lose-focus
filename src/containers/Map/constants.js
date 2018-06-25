@@ -12,5 +12,5 @@
  * Example: export const MY_TYPE = 'myproject/MyContainer/MY_TYPE
  */
 
-export const FETCH_LOCATIONS_REQUEST = 'google-maps-react-demo/Map/FETCH_LOCATIONS_REQUEST'
-export const FETCH_LOCATIONS_SUCCESS = 'google-maps-react-demo/Map/FETCH_LOCATIONS_SUCCESS'
+export const FETCH_LOCATIONS_REQUEST = 'google-maps-react-demo/Map/FETCH_LOCATIONS_REQUEST';
+export const FETCH_LOCATIONS_SUCCESS = 'google-maps-react-demo/Map/FETCH_LOCATIONS_SUCCESS';

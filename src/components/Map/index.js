@@ -1,10 +1,10 @@
-import React from 'react'
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps'
+import React from 'react';
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 
 /**
  * Import CSS
  */
-import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap.css';
 
 // react-google-maps uses a technique called
 // Higher-Order Components.
@@ -21,6 +21,6 @@ const Map = withScriptjs(withGoogleMap((props) => (
             ))
         }
     </GoogleMap>
-)))
+)));
 
-export default Map
+export default Map;

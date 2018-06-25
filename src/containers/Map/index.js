@@ -1,11 +1,11 @@
 //----Imports----//
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-import Map from '../../components/Map'
+import Map from '../../components/Map';
 
-import { markersSelector } from './selectors'
+import { markersSelector } from './selectors';
 
 //----Class Definition----//
 class MapContainer extends Component {
@@ -18,7 +18,7 @@ class MapContainer extends Component {
                 containerElement={<div style={{ height: `800px` }} />}
                 mapElement={<div style={{ height: `100%` }} />} 
                 markers={this.props.markers} />
-        )
+        );
     }
 }
 
@@ -29,12 +29,12 @@ MapContainer.propTypes = {
             lat: PropTypes.number,
             lng: PropTypes.number
     })).isRequired
-}
+};
 
 //----Redux Mappings----//
 const mapStateToProps = (state) => ({
     markers: markersSelector(state)
-})
+});
 
 //----Connect----//
-export default connect(mapStateToProps)(MapContainer)
+export default connect(mapStateToProps)(MapContainer);

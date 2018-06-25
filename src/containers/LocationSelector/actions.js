@@ -14,7 +14,7 @@
  */
 import {
     SELECTION_CHANGE
-} from './constants'
+} from './constants';
 
 /**
  * Dispatch that the selection has changed
@@ -23,5 +23,5 @@ import {
  * @return {object} An action with the type of SELECTION_CHANGE passing payload
  */
 export const selectionChange = (value) => {
-    return { type: SELECTION_CHANGE, payload: value }
-}
+    return { type: SELECTION_CHANGE, payload: value };
+};
