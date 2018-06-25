@@ -35,10 +35,13 @@ export default (initial_state = {}) => {
 
     if (process.env.NODE_ENV === 'development') {
         const composeWithDevToolsExtension = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
-        if (typeof composeWithDevToolsExtension === 'function') {
-            composeEnhancers = composeWithDevToolsExtension
-        } else {
-            composeEnhancers = compose(middlewares, window.devToolsExtension && window.devToolsExtension())
+
+        if (typeof composeWithDevToolsExtension !== 'undefined') {
+            if (typeof composeWithDevToolsExtension === 'function') {
+                composeEnhancers = composeWithDevToolsExtension
+            } else {
+                composeEnhancers = compose(middlewares, window.devToolsExtension && window.devToolsExtension())
+            }
         }
     }
 
