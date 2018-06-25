@@ -19,6 +19,7 @@ import {
 /**
  * Dispatch that the selection has changed
  * 
+ * @see LocationSelector
  * @fires LocationSelector/reducer/SELECTION_CHANGE
  * @return {object} An action with the type of SELECTION_CHANGE passing payload
  */

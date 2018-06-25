@@ -20,6 +20,7 @@ import {
 /**
  * Dispatch to fetch new locations.
  * 
+ * @see LocationSelector
  * @fires Map/sagas/fetchLocations
  * @return {object} An action with the type of FETCH_LOCATIONS_REQUEST passing
  * the selected location.
@@ -31,6 +32,7 @@ export const fetchLocationsRequest = (value) => {
 /**
  * Dispatch that new locations have been fetched.
  * 
+ * @see MapSagas
  * @fires Map/reducer/FETCH_LOCATIONS_SUCCESS
  * @return {object} An action with the type of FETCH_LOCATIONS_SUCCESS passing
  * the new locations.
