@@ -19,7 +19,7 @@ import { Provider } from 'react-redux';
 
 import './index.css';
 
-import App from './components/App';
+import App from './containers/App';
 import configureStore from './configureStore';
 
 // This is where our store is created, it is then
@@ -31,7 +31,8 @@ ReactDOM.render(
     // Redux requires a Provider to be wrapped around
     // the main App component.
 	<Provider store={store}>
-		<App />
+        <App
+            isAdmin={true} />
 	</Provider>,
 	document.getElementById('root')
 );

@@ -10,11 +10,9 @@ import { combineReducers } from 'redux';
  * Documentation on redux reducers can be found here:
  * https://redux.js.org/basics/reducers
  */
-import LocationSelectorReducer from './containers/LocationSelector/reducers';
-import MapReducer from './containers/Map/reducers';
+import AppReducer from './containers/App/reducers';
 
 //----Combine Reducers----//
 export const reducers = combineReducers({
-    map: MapReducer,
-    locationSelector: LocationSelectorReducer
+    app: AppReducer
 });
