@@ -1,8 +1,5 @@
-.admin-bar.editBtn {
-    margin-top: 5px;
-}
-
-.admin-bar.navbar {
+.header {
     border-radius: 0px !important;
     margin-bottom: 0px !important;
+    border: none;
 }

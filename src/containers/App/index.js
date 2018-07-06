@@ -3,14 +3,15 @@ import { connect } from 'react-redux';
 
 import App from '../../components/App';
 
-import { isAdminSelector, inEditModeSelector } from './selectors';
+import { isAdminSelector, inEditModeSelector, themeSelector } from './selectors';
 
 class AppContainer extends Component {
     render() {
         return (
             <App
                 isAdmin={this.props.isAdmin}
-                inEditMode={this.props.inEditMode} />
+                inEditMode={this.props.inEditMode}
+                theme={this.props.theme} />
         );
     }
 }
@@ -18,7 +19,8 @@ class AppContainer extends Component {
 //----Redux Mappings----//
 const mapStateToProps = (state) => ({
     isAdmin: isAdminSelector(state),
-    inEditMode: inEditModeSelector(state)
+    inEditMode: inEditModeSelector(state),
+    theme: themeSelector(state)
 });
 
 export default connect(mapStateToProps)(AppContainer);

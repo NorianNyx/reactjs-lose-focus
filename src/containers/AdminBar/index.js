@@ -10,7 +10,6 @@ class AdminBarContainer extends Component {
         super(props);
 
         this.handleOnEditModeChenge = this.handleOnEditModeChenge.bind(this);
-        console.log(props);
     }
 
     handleOnEditModeChenge() {

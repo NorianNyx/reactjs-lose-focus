@@ -1,5 +1,5 @@
 /**
- * Map Constants
+ * ThemeSetting Constants
  * 
  * Always keep a central location for our constants.
  * We use them in reducers, actions and sagas. So to keep
@@ -11,6 +11,4 @@
  * 
  * Example: export const MY_TYPE = 'myproject/MyContainer/MY_TYPE
  */
-
-export const FETCH_LOCATIONS_REQUEST = 'google-maps-react-demo/Map/FETCH_LOCATIONS_REQUEST';
-export const FETCH_LOCATIONS_SUCCESS = 'google-maps-react-demo/Map/FETCH_LOCATIONS_SUCCESS';
+export const THEME_SETTING_CHANGE = 'community/ThemeSetting/THEME_SETTING_CHANGE';

@@ -1,10 +1,19 @@
 import React from 'react';
+import Loadable from 'react-loadable';
 
-import SideBar from '../common/SideBar';
+import './styles.css';
 
-const AdminPanel = () => {
+const AdminPanel = ({ theme }) => {
+    const ThemedSideBar = Loadable({
+        loader: () => import('../../themes/' + theme.name + '/components/SideBar'),
+        loading: () => null
+    });
+
     return (
-        <SideBar />
+        <div className='col-sm-3 col-md-2 sidebar'>
+            <ThemedSideBar
+                settings={theme.settings} />
+        </div>
     );
 };
 

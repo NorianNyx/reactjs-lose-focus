@@ -13,3 +13,4 @@
  */
 export const isAdminSelector = (state) => state.app.isAdmin;
 export const inEditModeSelector = (state) => state.app.inEditMode;
+export const themeSelector = (state) => state.app.theme;

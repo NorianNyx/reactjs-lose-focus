@@ -6,6 +6,10 @@ import {
     EXIT_EDIT_MODE
 } from './constants';
 
+import {
+    THEME_SETTING_CHANGE
+} from '../ThemeSetting/constants';
+
 /**
  * Action Handlers
  * 
@@ -22,6 +26,17 @@ const ACTION_HANDLERS = {
         return { ...state,
             inEditMode: false
         };
+    },
+    [THEME_SETTING_CHANGE]: (state, action) => {
+        return { ...state,
+            theme: { ...state.theme,
+                settings: { ...state.theme.settings,
+                    [action.payload.parent]: { ...state.theme.settings[action.payload.parent],
+                        [action.payload.name]: action.payload.value
+                    }
+                }
+            }
+        };
     }
 };
 
@@ -36,7 +51,14 @@ const ACTION_HANDLERS = {
  */
 const initialState = {
     isAdmin: true,
-    inEditMode: false
+    inEditMode: false,
+    theme: {
+        name: 'Default',
+        settings: {
+            Header: {},
+            MainContent: {}
+        }
+    }
 };
 
 export default (state = initialState, action) => {

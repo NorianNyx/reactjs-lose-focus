@@ -17,6 +17,10 @@ import {
     EXIT_EDIT_MODE
 } from './constants';
 
+import {
+    THEME_SETTING_CHANGE
+} from '../ThemeSetting/constants';
+
 /**
  * Dispatch that the selection has changed
  * 
@@ -37,4 +41,15 @@ export const enterEditMode = () => {
  */
 export const exitEditMode = () => {
     return { type: EXIT_EDIT_MODE };
+};
+
+/**
+ * Dispatch that the selection has changed
+ * 
+ * @see ThemeSetting
+ * @fires App/reducer/THEME_SETTING_CHANGE
+ * @return {object} An action with the type of THEME_SETTING_CHANGE passing payload
+ */
+export const themeSettingChange = (value) => {
+    return { type: THEME_SETTING_CHANGE, payload: value };
 };
